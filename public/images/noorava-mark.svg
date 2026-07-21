@@ -1,0 +1,11 @@
+<svg width="640" height="640" viewBox="0 0 640 640" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">NoorAva mark</title>
+  <desc id="desc">A radiant arch, moon, and flowing verse lines for NoorAva.</desc>
+  <rect width="640" height="640" rx="160" fill="#F7EFE1"/>
+  <circle cx="320" cy="212" r="92" fill="#D8A24A" opacity="0.95"/>
+  <path d="M157 498V304C157 214 230 141 320 141s163 73 163 163v194" stroke="#2A3D45" stroke-width="34" stroke-linecap="round"/>
+  <path d="M220 472c41-72 96-108 165-108 42 0 76 12 103 36" stroke="#B24A3C" stroke-width="28" stroke-linecap="round"/>
+  <path d="M208 530c50-72 112-108 187-108 37 0 74 9 111 28" stroke="#2A3D45" stroke-width="22" stroke-linecap="round" opacity="0.9"/>
+  <path d="M258 286c40 26 85 26 124 0" stroke="#F7EFE1" stroke-width="22" stroke-linecap="round"/>
+  <text x="320" y="594" text-anchor="middle" font-family="Georgia, serif" font-size="54" fill="#2A3D45">نورآوا</text>
+</svg>
