@@ -1,10 +1,17 @@
 import type { Metadata, Viewport } from 'next';
-import { Bricolage_Grotesque } from 'next/font/google';
+import { Bricolage_Grotesque, Lato } from 'next/font/google';
 import './globals.css';
 
 const bricolage = Bricolage_Grotesque({
   subsets: ['latin'],
   variable: '--font-bricolage',
+  display: 'swap',
+});
+
+const lato = Lato({
+  subsets: ['latin'],
+  weight: ['700', '900'],
+  variable: '--font-lato',
   display: 'swap',
 });
 
@@ -46,7 +53,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={bricolage.variable}>{children}</body>
+      <body className={`${bricolage.variable} ${lato.variable}`}>{children}</body>
     </html>
   );
 }

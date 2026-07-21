@@ -15,6 +15,7 @@
   --font-sans:
     var(--font-bricolage), "Bricolage Grotesque", Inter, ui-sans-serif,
     system-ui, sans-serif;
+  --font-payments: var(--font-lato), Lato, var(--font-sans);
 }
 
 * {
@@ -30,8 +31,11 @@ body {
   background: var(--white);
   font-family: var(--font-sans);
   font-size: 15px;
-  line-height: 1.45;
+  line-height: 1.7;
+  letter-spacing: 0.25px;
   text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "liga" 1, "kern" 1;
 }
 a {
   color: inherit;
@@ -43,6 +47,14 @@ img {
 button,
 input {
   font: inherit;
+}
+
+button,
+.button,
+.support-pill,
+.donation-link,
+.footer {
+  letter-spacing: 0;
 }
 
 .site-shell {
@@ -132,15 +144,16 @@ input {
   margin: 0 0 33px;
   font-size: 20px;
   font-weight: 600;
-  letter-spacing: -0.01em;
+  line-height: 1.7;
+  letter-spacing: 0.25px;
 }
 .hero-copy h1,
 .donate-hero h1 {
   margin: 0;
   font-size: clamp(4.75rem, 6.05vw, 88px);
   font-weight: 400;
-  line-height: 0.96;
-  letter-spacing: -0.058em;
+  line-height: 1;
+  letter-spacing: -2px;
 }
 .hero-copy h1 {
   margin-bottom: 42px;
@@ -150,7 +163,8 @@ input {
   margin: 0;
   font-size: 18px;
   font-weight: 500;
-  line-height: 1.47;
+  line-height: 1.5;
+  letter-spacing: 0.25px;
 }
 .hero-panel-image {
   position: relative;
@@ -172,6 +186,8 @@ input {
   color: var(--white);
   background: var(--purple-dark);
   font-size: 20px;
+  font-weight: 400;
+  line-height: 1;
   text-decoration: none;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
 }
@@ -183,7 +199,8 @@ input {
   background: var(--black);
   font-size: 32px;
   font-weight: 500;
-  letter-spacing: -0.035em;
+  line-height: 1.5;
+  letter-spacing: 0.25px;
 }
 
 .event-section,
@@ -206,7 +223,7 @@ input {
   font-size: clamp(5.6rem, 8.82vw, 128px);
   font-weight: 500;
   line-height: 0.9;
-  letter-spacing: -0.064em;
+  letter-spacing: -2.56px;
   pointer-events: none;
   user-select: none;
 }
@@ -227,32 +244,40 @@ input {
   color: var(--purple);
   font-size: 16px;
   font-weight: 600;
+  line-height: 1.65;
+  letter-spacing: 0.25px;
 }
 .event-date {
   margin: 0 0 25px;
   color: var(--purple);
   font-size: 36px;
-  line-height: 1.22;
-  letter-spacing: -0.035em;
+  line-height: 1.25;
+  letter-spacing: -2px;
 }
 .event-section h2 {
   margin: 0 0 13px;
   color: var(--purple);
   font-size: 88px;
   font-weight: 400;
-  line-height: 0.96;
-  letter-spacing: -0.058em;
+  line-height: 1;
+  letter-spacing: -2px;
 }
 .event-subtitle {
   margin: 0 0 32px;
   color: var(--black);
   font-size: 20px;
+  line-height: 1.65;
 }
 .event-copy p:not(.eyebrow):not(.event-date):not(.event-subtitle) {
   margin: 37px 0 0;
   color: var(--taupe);
   font-size: 15px;
-  line-height: 1.55;
+  line-height: 1.7;
+}
+.event-copy .button + p {
+  color: var(--black);
+  font-size: 20px;
+  line-height: 1.65;
 }
 .button {
   display: inline-flex;
@@ -265,6 +290,8 @@ input {
   color: var(--white);
   background: var(--purple);
   font-size: 20px;
+  font-weight: 400;
+  line-height: 1;
   text-decoration: none;
   cursor: pointer;
 }
@@ -327,7 +354,7 @@ input {
   margin: 0;
   color: var(--taupe);
   font-size: 15px;
-  line-height: 1.55;
+  line-height: 1.7;
 }
 .performer img {
   width: 500px;
@@ -355,7 +382,7 @@ input {
   color: var(--black);
   font-size: 15px;
   font-weight: 500;
-  line-height: 1.55;
+  line-height: 1.7;
 }
 .location address {
   margin-bottom: 72px;
@@ -403,7 +430,7 @@ input {
   font-size: 64px;
   font-weight: 400;
   line-height: 1;
-  letter-spacing: -0.046em;
+  letter-spacing: 0.25px;
 }
 .support-purple p {
   position: relative;
@@ -411,12 +438,13 @@ input {
   max-width: 528px;
   margin: 0;
   font-size: 15px;
-  line-height: 1.55;
+  line-height: 1.7;
 }
 .support-kicker {
   margin-bottom: 18px !important;
   font-size: 20px !important;
   font-weight: 400;
+  line-height: 1.65 !important;
 }
 .support-gold {
   display: grid;
@@ -429,6 +457,8 @@ input {
   gap: 18px;
   color: var(--white);
   font-size: 24px;
+  font-weight: 400;
+  line-height: 1.65;
   text-decoration: none;
 }
 .donation-link span {
@@ -450,6 +480,7 @@ input {
   color: var(--black);
   background: var(--white);
   font-size: 14px;
+  line-height: 1.714;
 }
 .footer nav {
   display: grid;
@@ -488,6 +519,7 @@ input {
 .donate-heading-block p:last-child {
   margin: 22px 0 0;
   font-size: 20px;
+  line-height: 1.65;
 }
 .donate-events-pill {
   top: auto;
@@ -519,13 +551,14 @@ input {
   margin: 0 0 20px;
   font-size: 32px;
   font-weight: 500;
-  letter-spacing: -0.025em;
+  line-height: 1.65;
+  letter-spacing: 0.25px;
 }
 .donation-intro p {
   margin: 0;
   color: var(--taupe);
   font-size: 20px;
-  line-height: 1.48;
+  line-height: 1.65;
 }
 .donation-form {
   width: min(770px, 100%);
@@ -544,7 +577,8 @@ legend {
   color: var(--taupe);
   font-size: 14px;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  line-height: 1.43;
+  letter-spacing: 1.4px;
   text-transform: uppercase;
 }
 .segmented,
@@ -580,7 +614,15 @@ legend {
   color: var(--black);
   font-size: 14px;
   font-weight: 700;
+  line-height: 1.43;
   cursor: pointer;
+}
+.segmented label {
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+}
+.amount-grid label {
+  letter-spacing: 0;
 }
 .segmented input,
 .amount-grid input,
@@ -604,6 +646,11 @@ legend {
   padding: 0 18px;
   color: var(--taupe);
 }
+.custom-amount span:first-child {
+  font-family: var(--font-payments);
+  font-weight: 700;
+  letter-spacing: 0;
+}
 .custom-amount input {
   flex: 1;
   width: 100%;
@@ -611,6 +658,9 @@ legend {
   outline: 0;
   color: var(--taupe);
   background: transparent;
+  font-size: 15.2px;
+  line-height: 1.2;
+  letter-spacing: 0;
 }
 .payment-grid label {
   display: grid;
@@ -626,14 +676,18 @@ legend {
   background: var(--white);
 }
 .payment-grid strong {
-  font-family: Lato, var(--font-sans);
+  font-family: var(--font-payments);
   font-size: 18px;
   font-weight: 900;
+  line-height: 1.55;
 }
 .payment-grid span {
   margin-top: 7px;
   color: var(--taupe);
   font-size: 12px;
+  font-weight: 500;
+  line-height: 1.33;
+  letter-spacing: 0;
 }
 .paypal {
   color: #003087;
@@ -656,15 +710,21 @@ legend {
 }
 .summary-row div strong {
   font-size: 14px;
+  line-height: 1.43;
+  letter-spacing: 0;
 }
 .summary-row span {
   color: var(--taupe);
   font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0;
 }
 .summary-row > strong {
   color: var(--purple);
   font-size: 32px;
   font-weight: 500;
+  line-height: 1.65;
+  letter-spacing: 0.25px;
 }
 .donate-button {
   width: 100%;
@@ -673,8 +733,8 @@ legend {
   border-radius: 7px;
   color: var(--white);
   background: var(--purple);
-  font: 700 15px var(--font-sans);
-  letter-spacing: 0.06em;
+  font: 700 15.2px / 1.43 var(--font-sans);
+  letter-spacing: 0.76px;
   text-transform: uppercase;
   cursor: pointer;
 }
@@ -683,7 +743,8 @@ legend {
   margin: 22px auto 0;
   color: var(--taupe);
   font-size: 12px;
-  line-height: 1.35;
+  line-height: 1.33;
+  letter-spacing: 0;
 }
 .other-ways {
   display: grid;
@@ -704,12 +765,13 @@ legend {
 .giving-options h3 {
   margin: 0 0 20px;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 400;
+  line-height: 1.65;
 }
 .giving-options p {
   margin: 0;
   color: var(--taupe);
-  line-height: 1.55;
+  line-height: 1.7;
 }
 .questions-band {
   min-height: 158px;
@@ -720,12 +782,14 @@ legend {
   margin: 0 0 12px;
   font-size: 32px;
   font-weight: 500;
-  letter-spacing: -0.03em;
+  line-height: 1.65;
+  letter-spacing: 0.25px;
 }
 .questions-band p:last-child {
   margin: 0;
   font-size: 16px;
   font-weight: 700;
+  line-height: 1.65;
 }
 .questions-band a {
   color: var(--purple);
