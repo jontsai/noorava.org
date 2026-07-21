@@ -25,4 +25,10 @@ The production output is exported to `docs/`, with `.nojekyll` added for GitHub 
 
 ## Content/design notes
 
-The initial implementation is a working first pass while Figma access is blocked behind login. Replace placeholder poet/program copy once the final NoorAva content is available.
+The site implements Claire Chalfen's Figma direction for the NoorAva landing and donation flows using the exported Figma artwork in `public/images/figma/`.
+
+Known pending production inputs:
+
+- Final ticketing URL for Boundless
+- Final PayPal/Stripe donation URLs
+- Any confirmed legal/tax mailing details to replace donation-page placeholders
