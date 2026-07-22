@@ -1116,6 +1116,9 @@ legend {
 .site-menu-scroll-lock {
   overflow: hidden;
 }
+.site-menu-backdrop[hidden] {
+  display: none !important;
+}
 .site-nav {
   display: flex;
   align-items: center;
