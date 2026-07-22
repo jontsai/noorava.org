@@ -1024,6 +1024,8 @@ legend {
 
 /* Full site build-out from the Figma "Full Site Design" section. */
 .site-header {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1031,10 +1033,46 @@ legend {
   padding: 28px clamp(24px, 5vw, 72px);
   color: var(--purple);
   background: var(--white);
+  overflow: hidden;
+  isolation: isolate;
+}
+.site-header-purple {
+  color: var(--white);
+  background: rgba(65, 38, 105, 0.92);
+  box-shadow: 0 18px 50px rgba(65, 38, 105, 0.16);
+  backdrop-filter: blur(12px);
+}
+.site-header-purple::before,
+.site-header-purple::after {
+  content: "";
+  position: absolute;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  z-index: -1;
+}
+.site-header-purple::before {
+  width: 340px;
+  height: 180px;
+  top: -118px;
+  right: 12%;
+  transform: rotate(-12deg);
+}
+.site-header-purple::after {
+  width: 260px;
+  height: 140px;
+  bottom: -96px;
+  left: 18%;
+  transform: rotate(16deg);
 }
 .site-header-dark {
   color: var(--white);
   background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+.site-header-light {
+  color: var(--purple);
+  background: var(--white);
 }
 .site-header-logo img {
   width: 174px;
