@@ -47,7 +47,7 @@ export const founders = [
   {
     name: "Kamyar Faron",
     role: "Co-Founder & Executive Director",
-    image: "/images/figma/hero.jpg",
+    image: "/images/figma/founder-kamyar-faron.png",
     body: "Kamyar Faron brings together a lifetime of inquiry into self-discovery with decades of executive leadership, strategic vision, and nonprofit development. His work has been deeply influenced by Rumi, practical philosophy, Advaita, and contemplative traditions that invite direct self-knowledge through awareness and lived experience.",
   },
 ];
