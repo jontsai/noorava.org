@@ -81,7 +81,7 @@ export function ClassList() {
           <div className="tag-row">
             {item.tags.map((tag) => <span key={tag}>{tag}</span>)}
           </div>
-          <a className="button compact" href={item.href}>Watch now</a>
+          <a className="button compact" href={item.href}>Learn more</a>
         </article>
       ))}
     </div>

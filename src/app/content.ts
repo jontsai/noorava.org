@@ -96,10 +96,10 @@ export const performers = [
 
 export const classes = [
   {
-    title: "Name of Class and Name of Class",
-    subtitle: "Name of Class and Name of Class Lorem Ipsum Sit Dolor",
+    title: "Rumi Poetry & Music Classes",
+    subtitle: "Guided study of Rumi’s poetry through language, interpretation, and Persian musical tradition.",
     instructor: "Alireza Shahmohammadi",
-    time: "Thursday, Sept 20, 2026, 7–9pm, Online via Zoom",
+    time: "Dates and registration details coming soon",
     href: "/classes/rumi-poetry/",
     tags: ["Reading", "Interpretation & Analysis", "Music"],
   },

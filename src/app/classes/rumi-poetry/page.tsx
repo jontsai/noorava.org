@@ -17,8 +17,8 @@ export default function ClassDetailPage() {
         <SiteHeader />
         <PageHero
           eyebrow="Upcoming Class"
-          title="Name of Class and Class Details Lorem Ipsum Sit Dolor"
-          body="Need class details. This route now exists to match the Figma full-site class-detail frame and can be filled with final curriculum copy."
+          title="Rumi Poetry & Music Classes"
+          body="A NoorAva learning series on Rumi’s poetry, interpretation, and Persian musical tradition. Final schedule and registration details are coming soon."
           image="/images/figma/platforms.jpg"
         />
         <section className="full-section two-column">
@@ -32,8 +32,8 @@ export default function ClassDetailPage() {
             </div>
           </div>
           <div className="prose-block">
-            <p>This page corresponds to the Figma class detail frame. The source design still uses placeholder class title and body copy, so this page intentionally keeps that placeholder state visible instead of inventing final curriculum content.</p>
-            <p>When NoorAva confirms the class description, session outline, teacher bio, enrollment URL, and pricing, those details can drop into this layout.</p>
+            <p>NoorAva is preparing class offerings that bring together poetry, music, language, and cultural reflection. This page is ready for the final class description, session outline, enrollment link, and pricing once the programming is confirmed.</p>
+            <p>Join the NoorAva mailing list to hear when class dates and registration open.</p>
             <a className="button" href="/join/">Join the mailing list</a>
           </div>
         </section>

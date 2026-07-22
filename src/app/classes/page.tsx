@@ -14,8 +14,8 @@ export default function ClassesPage() {
         <SiteHeader />
         <PageHero
           eyebrow="Classes"
-          title="Classes Lorem Ipsum Sit"
-          body="The full-site Figma frame includes class landing and detail pages. Final class copy can replace these placeholders when programming is confirmed."
+          title="Learn Rumi’s Poetry, Music, and Living Wisdom"
+          body="NoorAva classes will invite students into Persian poetry, music, interpretation, and cultural context. Final dates and registration details are coming soon."
           image="/images/figma/hero.jpg"
         />
         <section className="full-section">
