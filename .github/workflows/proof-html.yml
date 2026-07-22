@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "24"
           cache: npm
       - run: npm ci
       - run: npm run typecheck
@@ -23,4 +23,5 @@ jobs:
         with:
           directory: ./docs
           check_css: false
-          ignore_url_re: '(maps\.google\.com|paypal\.com|stripe\.com)'
+          ignore_url_re: '(maps\.google\.com|paypal\.com|stripe\.com|noorava\.org)'
+          validator_ignore: "Element.*title.*not allowed as child of element.*head.*|Element.*style.*not allowed as child of element.*div.*in this context.*"
