@@ -32,3 +32,17 @@ Known pending production inputs:
 - Final ticketing URL for Boundless
 - Final PayPal/Stripe donation URLs
 - Any confirmed legal/tax mailing details to replace donation-page placeholders
+
+## Make targets
+
+```bash
+make install  # install dependencies
+make dev      # start local development server
+make build    # regenerate the static GitHub Pages site in docs/
+make check    # run typecheck, lint, and build
+make deploy   # build, commit docs/, and push to main to trigger Pages deploy
+```
+
+## Deployment
+
+The site deploys to GitHub Pages from the committed `docs/` directory via `.github/workflows/deploy-pages.yml` on pushes to `main` or manual workflow dispatch. `proof-html.yml` rebuilds the static site and validates the generated HTML on pull requests and `main` pushes.

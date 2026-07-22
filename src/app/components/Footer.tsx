@@ -10,7 +10,6 @@ export function Footer({ homeHref = "/" }: FooterProps) {
       </div>
       <nav aria-label="Footer navigation">
         <a href={`${homeHref}#what-we-do`}>What We Do</a>
-        <a href={`${homeHref}#learning`}>Learning</a>
         <a href={`${homeHref}#events`}>Events</a>
         <a href={`${homeHref}#about`}>About Us</a>
       </nav>
