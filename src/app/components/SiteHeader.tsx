@@ -73,6 +73,7 @@ export function SiteHeader({ mode = "purple" }: SiteHeaderProps) {
         className="site-menu-backdrop"
         type="button"
         aria-label="Close menu"
+        aria-hidden={!isMenuOpen}
         onClick={closeMenu}
         tabIndex={isMenuOpen ? 0 : -1}
       />
