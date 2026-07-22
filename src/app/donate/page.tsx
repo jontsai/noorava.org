@@ -1,4 +1,5 @@
 import { Footer } from "../components/Footer";
+import { SiteHeader } from "../components/SiteHeader";
 import { DonationForm } from "./DonationForm";
 
 export const metadata = {
@@ -10,17 +11,20 @@ export default function DonatePage() {
   return (
     <>
       <main className="site-shell donate-page">
+        <SiteHeader />
         <section className="donate-hero" aria-labelledby="donate-heading">
-          <img
-            className="logo donate-logo"
-            src="/images/figma/noorava-logo.svg"
-            alt="NoorAva"
-          />
+          <a href="/" aria-label="NoorAva home">
+            <img
+              className="logo donate-logo"
+              src="/images/figma/noorava-logo.svg"
+              alt="NoorAva"
+            />
+          </a>
           <div className="donate-heading-block">
             <p className="kicker">Support Our Work</p>
             <h1 id="donate-heading">Make a Tax Deductible Donation</h1>
           </div>
-          <a className="support-pill donate-events-pill" href="/">
+          <a className="support-pill donate-events-pill" href="/events/">
             Upcoming Events
           </a>
         </section>

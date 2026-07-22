@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 
 const presetAmounts = [100, 250, 500] as const;
 type PaymentMethod = "PayPal" | "Stripe";
@@ -34,31 +34,25 @@ export function DonationForm() {
 
   const canSubmit = selectedAmount >= 1;
 
-  function handleDonationSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-
-    if (!canSubmit) {
-      return;
-    }
-
+  const donationMailtoHref = useMemo(() => {
     const subject = encodeURIComponent(
-      `${frequency} ${currency.format(selectedAmount)} NoorAva donation via ${paymentMethod}`,
+      `${frequency} ${currency.format(selectedAmount || 250)} NoorAva donation via ${paymentMethod}`,
     );
     const body = encodeURIComponent(
       [
         "Hello NoorAva,",
         "",
-        `I would like to make a ${frequency.toLowerCase()} donation of ${currency.format(selectedAmount)} via ${paymentMethod}.`,
+        `I would like to make a ${frequency.toLowerCase()} donation of ${currency.format(selectedAmount || 250)} via ${paymentMethod}.`,
         "",
         "Please send me the next step for completing this donation securely.",
       ].join("\n"),
     );
 
-    window.location.href = `mailto:info@noorava.org?subject=${subject}&body=${body}`;
-  }
+    return `mailto:info@noorava.org?subject=${subject}&body=${body}`;
+  }, [frequency, paymentMethod, selectedAmount]);
 
   return (
-    <form className="donation-form" onSubmit={handleDonationSubmit}>
+    <div className="donation-form">
       <fieldset>
         <legend>Donation Frequency</legend>
         <div
@@ -185,14 +179,20 @@ export function DonationForm() {
         <strong>{canSubmit ? currency.format(selectedAmount) : "—"}</strong>
       </div>
 
-      <button className="donate-button" type="submit" disabled={!canSubmit}>
-        ♥ Donate {canSubmit ? currency.format(selectedAmount) : "—"} Now ↗
-      </button>
+      {canSubmit ? (
+        <a className="donate-button" href={donationMailtoHref}>
+          ♥ Request Donation Link for {currency.format(selectedAmount)} ↗
+        </a>
+      ) : (
+        <span className="donate-button is-disabled" aria-disabled="true">
+          Enter an amount to continue
+        </span>
+      )}
       <p className="secure-note">
-        Online checkout is being connected. For now, this button opens an email
-        with your selected amount and payment preference so NoorAva can send the
-        secure next step.
+        Online checkout is being connected. For now, email{" "}
+        <a href="mailto:info@noorava.org">info@noorava.org</a> with your selected
+        amount and payment preference so NoorAva can send the secure next step.
       </p>
-    </form>
+    </div>
   );
 }
