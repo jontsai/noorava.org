@@ -753,6 +753,9 @@ legend {
   letter-spacing: 0.25px;
 }
 .donate-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   min-height: 54px;
   border: 0;
@@ -761,10 +764,13 @@ legend {
   background: var(--purple);
   font: 700 15.2px / 1.43 var(--font-sans);
   letter-spacing: 0.76px;
+  text-align: center;
+  text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
 }
-.donate-button:disabled {
+.donate-button:disabled,
+.donate-button.is-disabled {
   cursor: not-allowed;
   opacity: 0.58;
 }
