@@ -1,7 +1,7 @@
 1:"$Sreact.fragment"
 2:I[9766,[],""]
 3:I[8924,[],""]
-4:I[2999,["69","static/chunks/app/classes/rumi-poetry/page-fa77567a859a89a7.js"],"SiteHeader"]
+4:I[2999,["69","static/chunks/app/classes/rumi-poetry/page-ed35deba64c268db.js"],"SiteHeader"]
 9:I[7150,[],""]
 :HL["/_next/static/media/6d664cce900333ee-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/7ff6869a1704182a-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]

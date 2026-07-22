@@ -74,6 +74,7 @@ export function SiteHeader({ mode = "purple" }: SiteHeaderProps) {
         type="button"
         aria-label="Close menu"
         aria-hidden={!isMenuOpen}
+        hidden={!isMenuOpen}
         onClick={closeMenu}
         tabIndex={isMenuOpen ? 0 : -1}
       />
