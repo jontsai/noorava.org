@@ -1,0 +1,26 @@
+name: Proof HTML
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm run build
+      - uses: anishathalye/proof-html@v2
+        with:
+          directory: ./docs
+          check_css: false
+          ignore_url_re: '(maps\.google\.com|paypal\.com|stripe\.com)'
