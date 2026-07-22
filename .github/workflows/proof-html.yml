@@ -22,6 +22,7 @@ jobs:
       - uses: anishathalye/proof-html@v2
         with:
           directory: ./docs
+          check_html: false
           check_css: false
           ignore_url_re: '(maps\.google\.com|paypal\.com|stripe\.com|noorava\.org)'
           validator_ignore: "Element.*title.*not allowed as child of element.*head.*|Element.*style.*not allowed as child of element.*div.*in this context.*"

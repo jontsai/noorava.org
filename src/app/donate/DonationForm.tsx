@@ -120,7 +120,7 @@ export function DonationForm() {
           <input
             id="custom-amount"
             name="customAmount"
-            type="text"
+            type="number"
             inputMode="decimal"
             min="1"
             placeholder="Enter custom amount"
