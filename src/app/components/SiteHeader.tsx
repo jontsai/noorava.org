@@ -18,6 +18,29 @@ export function SiteHeader({ mode = "purple" }: SiteHeaderProps) {
     setIsMenuEnhanced(true);
   }, []);
 
+  useEffect(() => {
+    if (!isMenuOpen) {
+      return;
+    }
+
+    document.body.classList.add("site-menu-scroll-lock");
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.classList.remove("site-menu-scroll-lock");
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isMenuOpen]);
+
+  const closeMenu = () => setIsMenuOpen(false);
+
   return (
     <header
       className={`site-header site-header-${mode} ${isMenuEnhanced ? "is-menu-enhanced" : ""} ${isMenuOpen ? "is-menu-open" : ""}`}
@@ -46,13 +69,26 @@ export function SiteHeader({ mode = "purple" }: SiteHeaderProps) {
           <span />
         </span>
       </button>
+      <button
+        className="site-menu-backdrop"
+        type="button"
+        aria-label="Close menu"
+        onClick={closeMenu}
+        tabIndex={isMenuOpen ? 0 : -1}
+      />
       <nav id={navId} className="site-nav" aria-label="Main navigation">
+        <div className="site-nav-mobile-header">
+          <span>Menu</span>
+          <button className="site-menu-close" type="button" onClick={closeMenu}>
+            Close
+          </button>
+        </div>
         {navItems.map((item) => (
           <a
             key={item.href}
             className={item.cta ? "nav-cta" : undefined}
             href={item.href}
-            onClick={() => setIsMenuOpen(false)}
+            onClick={closeMenu}
           >
             {item.label}
           </a>
