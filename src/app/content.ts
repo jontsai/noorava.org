@@ -64,7 +64,7 @@ export const founders = [
   {
     name: "Kamyar Faron",
     role: "Co-Founder & Executive Director",
-    image: "/images/figma/founder-kamyar-faron.png",
+    image: "/images/figma/founder-kamyar-faron.jpg",
     body: "Kamyar Faron brings together a lifetime of inquiry into self-discovery with decades of executive leadership, strategic vision, and nonprofit development. His work has been deeply influenced by Rumi, practical philosophy, Advaita, and contemplative traditions that invite direct self-knowledge through awareness and lived experience.",
   },
 ];
@@ -155,7 +155,7 @@ export const experienceMediaSections = [
     title: "The soul and architecture of a poem",
     body: "Interpretation listens inwardly; analysis sees clearly. Together they make Rumi’s poetry a doorway rather than a conclusion.",
     media: [
-      { type: "image", src: "/images/figma/founder-kamyar-faron.png", alt: "A warm still life of books and leaves" },
+      { type: "image", src: "/images/figma/founder-kamyar-faron.jpg", alt: "Kamyar Faron portrait" },
       { type: "image", src: "/images/figma/platforms.jpg", alt: "Books and Persian cultural objects" },
     ],
   },
