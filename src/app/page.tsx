@@ -1,5 +1,5 @@
 import { Footer } from "./components/Footer";
-import { FeaturedEvent, PillarGrid, SectionIntro, SupportCta } from "./components/FullSite";
+import { FeaturedEvent, ImageCopyBand, PillarGrid, SectionIntro, SupportCta } from "./components/FullSite";
 import { SiteHeader } from "./components/SiteHeader";
 import { longMission, missionIntro } from "./content";
 
@@ -21,23 +21,21 @@ export default function Home() {
         </section>
 
         <section className="value-strip" aria-label="NoorAva values">
-          {[
-            "Preservation",
-            "Education",
-            "Celebration",
-            "Connection",
-            "Community",
-            "Vision",
-          ].map((value) => <span key={value}>{value}</span>)}
+          <div className="value-track" aria-hidden="true">
+            {["Preservation", "Education", "Celebration", "Connection", "Community", "Vision", "Preservation", "Education", "Celebration", "Connection", "Community", "Vision"].map((value, index) => (
+              <span key={`${value}-${index}`} className={`value-${index % 6}`}>{value}</span>
+            ))}
+          </div>
+          <p className="sr-only">Preservation, education, celebration, connection, community, and vision.</p>
         </section>
 
-        <section className="full-section two-column" aria-labelledby="vision-heading">
-          <SectionIntro eyebrow="Community Vision" title="Rumi’s legacy is a unique and timeless treasure" body="Studied across centuries and cultures, its universality remains undisputed." />
-          <div className="prose-block">
-            <p>{longMission}</p>
-            <p>NoorAva endeavors to draw upon Iranian cultural and national heritage to help shape a cultivated and conscious national identity. We create spaces for reflection, dialogue, and collective renewal.</p>
-          </div>
-        </section>
+        <ImageCopyBand
+          eyebrow="Community Vision"
+          title="Rumi’s legacy is a unique and timeless treasure"
+          body={`${longMission} NoorAva endeavors to draw upon Iranian cultural and national heritage to help shape a cultivated and conscious national identity. We create spaces for reflection, dialogue, and collective renewal.`}
+          image="/images/figma/platforms.jpg"
+          imageAlt="Books and contemplative materials arranged for study"
+        />
 
         <section className="full-section sand-section" aria-labelledby="learn-heading">
           <SectionIntro eyebrow="Learn" title="A multidimensional path of understanding" body="NoorAva believes true understanding requires a holistic approach that embraces the interconnectedness of thought, sound, movement, and meaning." />

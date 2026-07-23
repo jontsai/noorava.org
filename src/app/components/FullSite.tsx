@@ -12,6 +12,21 @@ type PageHeroProps = {
   image?: string;
 };
 
+type SecondaryNavItem = {
+  label: string;
+  href: string;
+};
+
+type ImageCopyBandProps = {
+  id?: string;
+  eyebrow: string;
+  title: string;
+  body: string;
+  image: string;
+  imageAlt: string;
+  reverse?: boolean;
+};
+
 export function PageHero({ eyebrow = "NoorAva", title, body, image }: PageHeroProps) {
   return (
     <section className="full-hero" aria-labelledby="page-heading">
@@ -32,6 +47,33 @@ export function SectionIntro({ eyebrow, title, body }: { eyebrow?: string; title
       <h2>{title}</h2>
       {body ? <p>{body}</p> : null}
     </div>
+  );
+}
+
+export function SecondaryNav({ items, label = "Page sections" }: { items: SecondaryNavItem[]; label?: string }) {
+  return (
+    <nav className="anchor-nav" aria-label={label}>
+      {items.map((item) => (
+        <a key={item.href} href={item.href}>
+          {item.label}
+        </a>
+      ))}
+    </nav>
+  );
+}
+
+export function ImageCopyBand({ id, eyebrow, title, body, image, imageAlt, reverse = false }: ImageCopyBandProps) {
+  return (
+    <section id={id} className={`image-copy-band ${reverse ? "is-reverse" : ""}`}>
+      <div className="image-copy-media">
+        <img src={image} alt={imageAlt} />
+      </div>
+      <div className="image-copy-content">
+        <p className="full-eyebrow">{eyebrow}</p>
+        <h2>{title}</h2>
+        <p>{body}</p>
+      </div>
+    </section>
   );
 }
 

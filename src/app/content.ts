@@ -1,6 +1,23 @@
 export const navItems = [
-  { label: "Experience", href: "/experience/" },
-  { label: "About", href: "/what-we-do/" },
+  {
+    label: "Experience",
+    href: "/experience/",
+    children: [
+      { label: "Reading", href: "/experience/#reading" },
+      { label: "Interpretation", href: "/experience/#interpretation" },
+      { label: "Music", href: "/experience/#music" },
+      { label: "Dance", href: "/experience/#dance" },
+    ],
+  },
+  {
+    label: "About",
+    href: "/what-we-do/",
+    children: [
+      { label: "About Us", href: "/what-we-do/#about-us" },
+      { label: "Founders", href: "/about/" },
+      { label: "Mission", href: "/what-we-do/#mission" },
+    ],
+  },
   { label: "Classes", href: "/classes/" },
   { label: "Events", href: "/events/" },
   { label: "Join Us", href: "/join/" },
@@ -102,6 +119,66 @@ export const classes = [
     time: "Dates and registration details coming soon",
     href: "/classes/rumi-poetry/",
     tags: ["Reading", "Interpretation & Analysis", "Music"],
+  },
+  {
+    title: "Reading Rumi Aloud",
+    subtitle: "A close-reading practice for sound, cadence, pronunciation, silence, and poetic attention.",
+    instructor: "NoorAva faculty",
+    time: "Dates and registration details coming soon",
+    href: "/classes/rumi-poetry/",
+    tags: ["Reading", "Interpretation & Analysis"],
+  },
+  {
+    title: "Persian Music as Contemplation",
+    subtitle: "An introductory class connecting Persian classical music, listening, presence, and poetic meaning.",
+    instructor: "Alireza Shahmohammadi",
+    time: "Dates and registration details coming soon",
+    href: "/classes/rumi-poetry/",
+    tags: ["Music", "Celebration"],
+  },
+];
+
+export const experienceMediaSections = [
+  {
+    id: "reading",
+    eyebrow: "Reading",
+    title: "Poetry is sound before it is sense",
+    body: "Proper reading begins with slowness — allowing each word, pause, image, and cadence to breathe before analysis begins.",
+    media: [
+      { type: "image", src: "/images/figma/platforms.jpg", alt: "Open books and contemplative study materials" },
+      { type: "image", src: "/images/figma/hero.jpg", alt: "A quiet NoorAva gathering space" },
+    ],
+  },
+  {
+    id: "interpretation",
+    eyebrow: "Interpretation & Analysis",
+    title: "The soul and architecture of a poem",
+    body: "Interpretation listens inwardly; analysis sees clearly. Together they make Rumi’s poetry a doorway rather than a conclusion.",
+    media: [
+      { type: "image", src: "/images/figma/founder-kamyar-faron.png", alt: "A warm still life of books and leaves" },
+      { type: "image", src: "/images/figma/platforms.jpg", alt: "Books and Persian cultural objects" },
+    ],
+  },
+  {
+    id: "music",
+    eyebrow: "Music",
+    title: "Sound carries wisdom into the body",
+    body: "Music harmonizes the soul with nature and the whole of existence through Persian literature, mystical tradition, peace, and joy.",
+    media: [
+      { type: "video", src: "/images/figma/performer-alireza.jpg", alt: "Alireza Shahmohammadi performance video thumbnail" },
+      { type: "image", src: "/images/figma/performer-behfar.jpg", alt: "Behfar Bahadoran with string instrument" },
+      { type: "image", src: "/images/figma/performer-pejman.jpg", alt: "Pejman Hadadi portrait" },
+    ],
+  },
+  {
+    id: "dance",
+    eyebrow: "Dance",
+    title: "Movement becomes another path back to the source",
+    body: "When beauty and love are poured into being, they become poetry, music, dance, or all three together.",
+    media: [
+      { type: "image", src: "/images/figma/event.jpg", alt: "Boundless performance artwork" },
+      { type: "video", src: "/images/figma/hero.jpg", alt: "NoorAva movement video thumbnail" },
+    ],
   },
 ];
 

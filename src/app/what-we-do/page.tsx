@@ -1,5 +1,5 @@
 import { Footer } from "../components/Footer";
-import { FeaturedEvent, PageHero, PillarGrid, SectionIntro, SupportCta } from "../components/FullSite";
+import { FeaturedEvent, ImageCopyBand, PageHero, PillarGrid, SecondaryNav, SectionIntro, SupportCta } from "../components/FullSite";
 import { SiteHeader } from "../components/SiteHeader";
 import { longMission } from "../content";
 
@@ -19,12 +19,26 @@ export default function WhatWeDoPage() {
           body="NoorAva brings poetry, music, movement, and wisdom together so Rumi is not only studied, but encountered."
           image="/images/figma/hero.jpg"
         />
-        <section className="full-section two-column">
-          <SectionIntro eyebrow="True Understanding" title="A living encounter with wisdom" />
+        <SecondaryNav
+          label="About sections"
+          items={[
+            { label: "About Us", href: "#about-us" },
+            { label: "Mission", href: "#mission" },
+            { label: "Founders", href: "/about/" },
+          ]}
+        />
+        <ImageCopyBand
+          id="about-us"
+          eyebrow="True Understanding"
+          title="A living encounter with wisdom"
+          body={`${longMission} Hekmat-e Khosrovani is the wisdom of being, not merely knowing — a path where light, justice, beauty, and truth are inseparable.`}
+          image="/images/figma/performer-alireza.jpg"
+          imageAlt="Musician holding a traditional Persian string instrument outdoors"
+        />
+        <section id="mission" className="full-section two-column alt">
+          <SectionIntro eyebrow="Mission" title="A council for cultural renewal" />
           <div className="prose-block">
-            <p>{longMission}</p>
-            <p>Hekmat-e Khosrovani is the wisdom of being, not merely knowing — a path where light, justice, beauty, and truth are inseparable. NoorAva draws on this cultural and spiritual lineage to cultivate inner awakening, ethical refinement, and unity with the greater order of existence.</p>
-            <p>We also seek to form a council of experts devoted to revitalizing Iranian culture and values within the Iranian-American community through performances, academic symposia, research-based gatherings, and spaces for collective renewal.</p>
+            <p>We seek to form a council of experts devoted to revitalizing Iranian culture and values within the Iranian-American community through performances, academic symposia, research-based gatherings, and spaces for collective renewal.</p>
           </div>
         </section>
         <section className="full-section sand-section">
