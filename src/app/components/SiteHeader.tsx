@@ -86,14 +86,25 @@ export function SiteHeader({ mode = "purple" }: SiteHeaderProps) {
           </button>
         </div>
         {navItems.map((item) => (
-          <a
-            key={item.href}
-            className={item.cta ? "nav-cta" : undefined}
-            href={item.href}
-            onClick={closeMenu}
-          >
-            {item.label}
-          </a>
+          <div key={item.href} className={item.children ? "site-nav-item has-flyout" : "site-nav-item"}>
+            <a
+              className={item.cta ? "nav-cta" : undefined}
+              href={item.href}
+              onClick={closeMenu}
+              aria-haspopup={item.children ? "true" : undefined}
+            >
+              {item.label}
+            </a>
+            {item.children ? (
+              <div className="site-nav-flyout" aria-label={`${item.label} links`}>
+                {item.children.map((child) => (
+                  <a key={child.href} href={child.href} onClick={closeMenu}>
+                    {child.label}
+                  </a>
+                ))}
+              </div>
+            ) : null}
+          </div>
         ))}
       </nav>
     </header>
